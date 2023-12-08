@@ -1,5 +1,6 @@
 # Cook Me Something
 Web application that lets users put in any ingredients they have, and get recipes that contain those ingredients using OpenAI.
+View live version [here](https://cook-me-something.web.app/)
 
 ##Screenshots
 <img src="https://firebasestorage.googleapis.com/v0/b/what-has-ian-done.appspot.com/o/kouhai%2Fscreencapture-cook-me-something-web-app-2023-12-08-05_56_58.png?alt=media&token=60127f23-dbf7-440a-863b-232b784f252c" alt="start" />
