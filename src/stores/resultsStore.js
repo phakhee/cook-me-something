@@ -1,5 +1,6 @@
 import {makeAutoObservable} from "mobx";
 import {RecipeStore} from "./recipeStore";
+import {formatIngredients} from "../constants/functions";
 
 export class ResultsStore {
   recipes = [];
@@ -13,7 +14,7 @@ export class ResultsStore {
     const req = await fetch(reqUrl, {
       method: "POST",
       body: JSON.stringify({
-        ingredients: ingredients.replace(/[^a-zA-Z\s]/g, '').split(" ").join(","),
+        ingredients: formatIngredients(ingredients, ","),
         amount: amount
       })
     });

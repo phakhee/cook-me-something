@@ -1,0 +1,4 @@
+export const CLOCK = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/clock.png?alt=media&token=82955290-09ab-4b91-88b3-5d254e3db0d2";
+export const PAN = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/cooking-indicator.png?alt=media&token=001c6940-2db0-4251-9304-61059187f2b6";
+export const FORK_KNIFE = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/diet.png?alt=media&token=02830a25-d4b0-478d-86dd-55672eff89dd";
+export const SERVINGS = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/dinner.png?alt=media&token=d11173a9-b974-4fc0-a671-bf7db198374b";

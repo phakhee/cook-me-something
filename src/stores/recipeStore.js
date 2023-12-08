@@ -13,4 +13,8 @@ export class RecipeStore {
     makeAutoObservable(this);
     Object.keys(args).forEach(key => this[key] = args[key]);
   }
+
+  getTotalTime() {
+    return parseInt(this.prepTime) + parseInt(this.cookTime);
+  }
 }

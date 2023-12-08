@@ -7,12 +7,14 @@ import {useEffect, useState} from "react";
 import AllResults from "../AllResults";
 import {toast, ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {useSearchParams} from "react-router-dom";
 
-function ResultsMenu() {
+function ResultsMenu({handleSelectedChange}) {
   const recipes = resultsStore.recipes;
-  const [keywords, setKeywords] = useState("");
   const [amount, setAmount] = useState(0);
   const [loading, setLoading] = useState(false);
+  let [searchParams] = useSearchParams();
+  const [keywords, setKeywords] = useState(searchParams.get("k"));
 
   const handleAmountChange = (value) => setAmount(amount + value);
   const onSubmit = () => {
@@ -61,7 +63,7 @@ function ResultsMenu() {
       </InputRow>
       <p>Found <ResultsAmount>{recipes.length}</ResultsAmount> results</p>
 
-      <AllResults loading={loading} />
+      <AllResults loading={loading} handleSelectedChange={handleSelectedChange} />
       <ToastContainer />
     </ResultsListContainer>
   );

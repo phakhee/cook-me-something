@@ -13,6 +13,8 @@ import {toast, ToastContainer} from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import Loading from "../../components/Loading";
+import {FORK_KNIFE, PAN} from "../../constants/images";
+import {formatIngredients} from "../../constants/functions";
 
 function Search() {
   const navigate = useNavigate();
@@ -30,7 +32,7 @@ function Search() {
         toast.error("Failed to get recipes, try again later.", {
           position: toast.POSITION.BOTTOM_CENTER
         });
-      } else navigate("/results");
+      } else navigate(`/results?k=${formatIngredients(keywords, "+")}`);
     });
   };
 
@@ -47,10 +49,7 @@ function Search() {
         <>
           <Row verticalAlign>
             <SiteName>Cook me something</SiteName>
-            <ForkKnife
-              src={"https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/diet.png?alt=media&token=02830a25-d4b0-478d-86dd-55672eff89dd"}
-              draggable={false}
-            />
+            <ForkKnife src={FORK_KNIFE} draggable={false} />
           </Row>
           <SiteDescription>Find recipes based on the ingredients you have.</SiteDescription>
 
@@ -86,14 +85,7 @@ function Search() {
           <ToastContainer />
         </>
       )}
-      {loading && (
-        <>
-          <Loading
-            imageUrl={"https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/cooking-indicator.png?alt=media&token=001c6940-2db0-4251-9304-61059187f2b6"}
-            text="Cooking..."
-          />
-        </>
-      )}
+      {loading && (<Loading imageUrl={PAN} text="Cooking..." />)}
     </SearchContainer>
   )
 }

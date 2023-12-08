@@ -3,21 +3,19 @@ import {AllResultsContainer, RecipeCardRow, RecipeName, ResultCard} from "./styl
 import {LoadingContainer} from "../Loading/styles";
 import Loading from "../Loading";
 import {resultsStore} from "../../stores";
+import {CLOCK, PAN} from "../../constants/images";
 
-function AllResults({loading}) {
+function AllResults({loading, handleSelectedChange}) {
 
   if (!loading) {
     return (
       <AllResultsContainer>
-        {resultsStore.recipes.map(r => (
-          <ResultCard>
+        {resultsStore.recipes.map((r, i) => (
+          <ResultCard onClick={() => handleSelectedChange(r)} key={`${i}-${r.name}`}>
             <RecipeName>{r.name}</RecipeName>
             <RecipeCardRow verticalAlign>
-              <img
-                src="https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/clock.png?alt=media&token=82955290-09ab-4b91-88b3-5d254e3db0d2"
-                alt="clock"
-              />
-              <p>{parseInt(r.cookTime) + parseInt(r.prepTime)} minutes</p>
+              <img src={CLOCK} alt="clock"/>
+              <p>{r.getTotalTime()} minutes</p>
             </RecipeCardRow>
           </ResultCard>
         ))}
@@ -27,7 +25,7 @@ function AllResults({loading}) {
     return (
       <LoadingContainer>
         <Loading
-          imageUrl={"https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/cooking-indicator.png?alt=media&token=001c6940-2db0-4251-9304-61059187f2b6"}
+          imageUrl={PAN}
           text="Cooking..."
         />
       </LoadingContainer>
