@@ -26,7 +26,7 @@ function AllResults({loading, handleSelectedChange}) {
       <LoadingContainer>
         <Loading
           imageUrl={PAN}
-          text="Cooking..."
+          text="Cooking, this might take a while..."
         />
       </LoadingContainer>
     );

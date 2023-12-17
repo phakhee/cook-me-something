@@ -64,7 +64,7 @@ function Search() {
             </InputContainer>
 
             <AmountContainer>
-              <p>Amount: </p>
+              <p>Recipe Count: </p>
               <ChangeAmountButton onClick={() => handleAmountChange(-1)}><span>-</span></ChangeAmountButton>
               {amount}
               <ChangeAmountButton onClick={() => handleAmountChange(1)}><span>+</span></ChangeAmountButton>
@@ -85,7 +85,7 @@ function Search() {
           <ToastContainer />
         </>
       )}
-      {loading && (<Loading imageUrl={PAN} text="Cooking..." />)}
+      {loading && (<Loading imageUrl={PAN} text="Cooking, this might take a while..." />)}
     </SearchContainer>
   )
 }

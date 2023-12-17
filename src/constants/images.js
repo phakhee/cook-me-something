@@ -1,4 +1,4 @@
-export const CLOCK = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/clock.png?alt=media&token=82955290-09ab-4b91-88b3-5d254e3db0d2";
-export const PAN = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/cooking-indicator.png?alt=media&token=001c6940-2db0-4251-9304-61059187f2b6";
-export const FORK_KNIFE = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/diet.png?alt=media&token=02830a25-d4b0-478d-86dd-55672eff89dd";
-export const SERVINGS = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/dinner.png?alt=media&token=d11173a9-b974-4fc0-a671-bf7db198374b";
+export const CLOCK = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/clock.webp?alt=media&token=d9464b58-82bb-4d5c-9009-bcdc28364107";
+export const PAN = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/cooking-indicator.webp?alt=media&token=d10f611e-5d0b-494b-b963-1e6f9913f93e";
+export const FORK_KNIFE = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/diet.webp?alt=media&token=bee0cf20-6938-44e2-958e-58b8199e23a8";
+export const SERVINGS = "https://firebasestorage.googleapis.com/v0/b/cook-me-something.appspot.com/o/dinner.webp?alt=media&token=0f027553-13a8-4fe6-9c2a-779acf84be78";

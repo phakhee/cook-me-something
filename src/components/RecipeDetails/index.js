@@ -4,7 +4,7 @@ import {
   DurationRow, RecipeSection,
   RecipeDetailsContainer,
   RecipeDetailsHeader,
-  RecipeDetailsRow, RecipeSectionHeader, RecipeSteps, RecipeStep
+  RecipeDetailsRow, RecipeSectionHeader, RecipeSteps, RecipeStep, NoneSelectedText
 } from "./styles";
 import {RecipeName} from "../AllResults/styles";
 import {CLOCK, SERVINGS} from "../../constants/images";
@@ -62,6 +62,9 @@ function RecipeDetails({selected, handleSelectedChange}) {
             </RecipeSteps>
           </RecipeSection>
         </>
+      )}
+      {!selected && (
+        <NoneSelectedText>Choose a recipe from the list to see more information.</NoneSelectedText>
       )}
     </RecipeDetailsContainer>
   );

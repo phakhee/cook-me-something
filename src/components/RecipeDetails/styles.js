@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import {Row} from "../../styles";
 
+export const NoneSelectedText = styled.p`
+  margin: auto;
+`;
+
 export const RecipeDetailsContainer = styled.div`
   flex: 1;
   background: white;

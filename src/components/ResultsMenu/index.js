@@ -55,7 +55,7 @@ function ResultsMenu({handleSelectedChange}) {
           </SearchClickableText>
         </InputContainer>
         <AmountContainer>
-          <p>Amount: </p>
+          <p>Recipe Count: </p>
           <ChangeAmountButton onClick={() => handleAmountChange(-1)}><span>-</span></ChangeAmountButton>
           {amount}
           <ChangeAmountButton onClick={() => handleAmountChange(1)}><span>+</span></ChangeAmountButton>
